@@ -1,54 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Product Details</title>
-    </head>
-    <body>
-    <h1>Product Details</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product Details</title>
+    <link
+      rel="stylesheet"
+      media="screen and (min-width:900px)"
+      href="css/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:900px)"
+      href="css/mobile.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
     <section id="product_details">
-        <h2>Product 1</h2>
-        <div><img src="images/pic1.jpg" alt="Product One" height="300" width="500"></div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, enim! Tenetur provident sequi neque quasi nostrum? Sed, atque? Aliquid neque numquam a exercitationem, voluptatum corporis delectus minus fuga iusto molestiae.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis delectus facere expedita voluptatem rerum iure fugit culpa explicabo voluptatum pariatur suscipit rem adipisci magni sunt modi aliquid nostrum, dignissimos consectetur!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nobis itaque esse ratione dolores nam libero hic reprehenderit distinctio pariatur quis aperiam corporis iusto similique labore, molestias consequatur, eius doloremque.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, eveniet? At suscipit porro doloribus, nisi eum repudiandae corporis aut consequuntur ea enim deserunt quis ad eius, voluptatum omnis officia! Explicabo?
-        </p>
-        <div>Price: $29.99</div>
-        <form>
-            <button id="add-to-cart-button">Add to Cart</button>
-        </form>
-        <table>
-            <tr>
-                <td>Size:</td><td>8</td>
-            </tr>
-            <tr>
-                <td>Color:</td><td>Blue</td>
-            </tr>
-            <tr>
-                <td>Status:</td><td>Available</td>
-            </tr>
-        </table>
-        <div>
-            <table>
-                <tr>
-                    <td><a href="images/pic2.jpg" target="_blank"><img src="images/pic2.jpg" alt="Product 1" width="100" height="80"></a></td>
-                    <td><a href="images/pic3.jpg" target="_blank"><img src="images/pic3.jpg" alt="Product 1" width="100" height="80"></a></td>
-                    <td><a href="images/pic4.jpg" target="_blank"><img src="images/pic4.jpg" alt="Product 1" width="100" height="80"></a></td>
-                    <td><a href="images/pic5.jpg" target="_blank"><img src="images/pic5.jpg" alt="Product 1" width="100" height="80"></a></td>
-                    <td><a href="images/pic6.jpg" target="_blank"><img src="images/pic6.jpg" alt="Product 1" width="100" height="80"></a></td>
-                    <td><a href="images/pic7.jpg" target="_blank"><img src="images/pic7.jpg" alt="Product 1" width="100" height="80"></a></td>
-                    <td><a href="images/pic8.jpg" target="_blank"><img src="images/pic8.jpg" alt="Product 1" width="100" height="80"></a></td>
-                    <td><a href="images/pic9.jpg" target="_blank"><img src="images/pic9.jpg" alt="Product 1" width="100" height="80"></a></td>
-                    <td><a href="images/pic10.jpg" target="_blank"><img src="images/pic10.jpg" alt="Product 1" width="100" height="80"></a></td>
-                </tr>
-            </table>
+      <h1>Shirt</h1>
+      <div class="container">
+        <div class="img">
+          <img
+            src="images/pic1.jpg"
+            alt="Product One"
+            height="300"
+            width="500"
+          />
         </div>
+        <div class="description">
+          <h2>Description</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+            enim! Tenetur provident sequi neque quasi nostrum? Sed, atque?Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, enim!
+            Tenetur provident sequi neque quasi nostrum? Sed, atque?Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Obcaecati, enim!
+            Tenetur provident sequi neque quasi nostrum? Sed, atque?
+          </p>
+        </div>
+        <form class="frm-add-to-cart">
+          <button id="add-to-cart-button">Add to Cart</button>
+        </form>
+        <section class="sizes">
+          <h3>Availale Sizes</h3>
+          <div class="size-rw hdr">
+            <div>Size</div>
+            <div>Availability</div>
+          </div>
+          <div class="size-rw">
+            <div>Small</div>
+            <div>In Stock</div>
+          </div>
+          <div class="size-rw">
+            <div>Medium</div>
+            <div>In Stock</div>
+          </div>
+          <div class="size-rw">
+            <div>Large</div>
+            <div>Out of Stock</div>
+          </div>
+          <div class="size-rw">
+            <div>Extra Large</div>
+            <div>In Stock</div>
+          </div>
+        </section>
+      </div>
     </section>
-    <hr>
+
     <footer>
-        <div></div>
-        <div>Copyright &copy; 2025. ZYZ Corporation</div>
+      <div class="copyright">&copy; 2025. ZYZ Corporation</div>
     </footer>
-    </body>
+  </body>
 </html>

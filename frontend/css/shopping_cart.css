@@ -31,7 +31,13 @@ input[type="number"] {
   width: 95%;
   border: none;
   background-color: transparent;
+  outline: none;
 }
+
+.p-quantity input {
+  border: 1px solid #cccccc;
+}
+
 .btn-remove {
   background-color: transparent;
   border: 1px solid #cccccc;

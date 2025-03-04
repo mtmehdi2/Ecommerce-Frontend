@@ -12,23 +12,210 @@
     <link
       rel="stylesheet"
       media="screen and (max-width:900px)"
-      href="css/shoppring_cart_mobile.css"
+      href="css/shopping_cart_mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
   <body>
     <h1>Shopping Cart</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, iste labore aspernatur deserunt quos voluptate quis excepturi accusantium, mollitia assumenda iure, consectetur illum at! Vel dolorum nam eum officiis ducimus.</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, iste labore
+      aspernatur deserunt quos voluptate quis excepturi accusantium, mollitia
+      assumenda iure, consectetur illum at! Vel dolorum nam eum officiis
+      ducimus.
+    </p>
+
     <section id="cart_content">
-      <form method="post" class="cart-table">
-        <div class="cart-item">
-          <div class="prod-img"><img src="images/pic1.jpg" width="100" height="100"><div>
+      <form method="post">
+        <div class="cart-table">
+          <div class="cart-item-title">
+            <div>&nbsp;</div>
+            <div>Product Title</div>
+            <div>Unit Price</div>
+            <div title="Click on up/down arrow to change the quantity">
+              Quantity
+              <span class="fa fa-info-circle info">&nbsp;</span>
+            </div>
+            <div>Total Price</div>
+            <div>Action</div>
+          </div>
+          <div class="cart-item" id="item1">
+            <div class="prod-img">
+              <img src="images/pic1.jpg" width="50" height="50" />
+            </div>
             <div class="prod-title">Product 1</div>
-            <div class="p-unit-price"><input type="number" value="9.99" readonly id="unit_price1"></div>
-            <div class="p-quantity"><input type="number" value="1" id="quantity1" min="0"></div>
-            <div class="p-total-price"><input type="number" value="9.99" readonly id="total_price1"></div>
-            <div class="p-action"><button id="btn_remove1" type="button">Remove</button></div>
+            <div class="p-unit-price">
+              <input type="number" value="9.99" readonly id="unit_price1" />
+            </div>
+            <div class="p-quantity">
+              <input
+                type="number"
+                value="1"
+                id="quantity1"
+                min="1"
+                onchange="calc(1)"
+              />
+            </div>
+            <div class="p-total-price">
+              <input type="number" value="9.99" readonly id="total_price1" />
+            </div>
+            <div class="p-action">
+              <button
+                id="btn_remove1"
+                type="button"
+                class="btn-remove fa fa-trash"
+                onclick="removeItem(1)"
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+          <div class="cart-item" id="item2">
+            <div class="prod-img">
+              <img src="images/pic2.jpg" width="50" height="50" />
+            </div>
+            <div class="prod-title">Product 2</div>
+            <div class="p-unit-price">
+              <input type="number" value="12.99" readonly id="unit_price2" />
+            </div>
+            <div class="p-quantity">
+              <input
+                type="number"
+                value="1"
+                id="quantity2"
+                min="1"
+                onchange="calc(2)"
+              />
+            </div>
+            <div class="p-total-price">
+              <input type="number" value="12.99" readonly id="total_price2" />
+            </div>
+            <div class="p-action">
+              <button
+                id="btn_remove2"
+                type="button"
+                class="btn-remove fa fa-trash"
+                onclick="removeItem(2)"
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+          <div class="cart-item" id="item3">
+            <div class="prod-img">
+              <img src="images/pic3.jpg" width="50" height="50" />
+            </div>
+            <div class="prod-title">Product 3</div>
+            <div class="p-unit-price">
+              <input type="number" value="25.99" readonly id="unit_price3" />
+            </div>
+            <div class="p-quantity">
+              <input
+                type="number"
+                value="1"
+                id="quantity3"
+                min="1"
+                onchange="calc(3)"
+              />
+            </div>
+            <div class="p-total-price">
+              <input type="number" value="25.99" readonly id="total_price3" />
+            </div>
+            <div class="p-action">
+              <button
+                id="btn_remove3"
+                type="button"
+                class="btn-remove fa fa-trash"
+                onclick="removeItem(3)"
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+          <div class="cart-item" id="item4">
+            <div class="prod-img">
+              <img src="images/pic4.jpg" width="50" height="50" />
+            </div>
+            <div class="prod-title">Product 4</div>
+            <div class="p-unit-price">
+              <input type="number" value="15.99" readonly id="unit_price4" />
+            </div>
+            <div class="p-quantity">
+              <input
+                type="number"
+                value="1"
+                id="quantity4"
+                min="1"
+                onchange="calc(4)"
+              />
+            </div>
+            <div class="p-total-price">
+              <input type="number" value="15.99" readonly id="total_price4" />
+            </div>
+            <div class="p-action">
+              <button
+                id="btn_remove4"
+                type="button"
+                class="btn-remove fa fa-trash"
+                onclick="removeItem(4)"
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+          <div class="cart-item" id="item5">
+            <div class="prod-img">
+              <img src="images/pic5.jpg" width="50" height="50" />
+            </div>
+            <div class="prod-title">Product 5</div>
+            <div class="p-unit-price">
+              <input type="number" value="19.99" readonly id="unit_price5" />
+            </div>
+            <div class="p-quantity">
+              <input
+                type="number"
+                value="1"
+                id="quantity5"
+                min="1"
+                onchange="calc(5)"
+              />
+            </div>
+            <div class="p-total-price">
+              <input type="number" value="20.99" readonly id="total_price5" />
+            </div>
+            <div class="p-action">
+              <button
+                id="btn_remove5"
+                type="button"
+                class="btn-remove fa fa-trash"
+                onclick="removeItem(5)"
+              >
+                Remove
+              </button>
+            </div>
+          </div>
         </div>
       </form>
     </section>
+    <script>
+      function removeItem(ind) {
+        if (
+          confirm(
+            "Do you really want to remove this item from the shopping cart?"
+          )
+        ) {
+          document.getElementById("item" + ind).remove();
+        }
+      }
+      function calc(ind) {
+        let qty = document.getElementById("quantity" + ind).value;
+        let unit_price = document.getElementById("unit_price" + ind).value;
+        let total_price = document.getElementById("total_price" + ind);
+        total_price.value = qty * unit_price;
+      }
+    </script>
   </body>
 </html>

@@ -6,4 +6,65 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  padding: 0 50px;
+}
+
+.cart-item {
+  display: flex;
+}
+.cart-table .cart-item:nth-child(odd) {
+  background-color: #e6f1ec;
+}
+
+.prod-title {
+  width: 50%;
+  line-height: 50px;
+}
+.prod-img,
+.p-quantity,
+.p-unit-price,
+.p-total-price {
+  width: 10%;
+}
+input[type="number"] {
+  padding: 10px;
+  width: 95%;
+  border: none;
+  background-color: transparent;
+}
+.btn-remove {
+  background-color: transparent;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-remove::before,
+.btn-remove::after {
+  color: red;
+}
+.p-action,
+.p-total-price,
+.p-quantity,
+.p-unit-price,
+.p-prod-title {
+  padding-top: 8px;
+}
+
+.cart-item-title {
+  background-color: darkgreen;
+  display: flex;
+  font-weight: bold;
+  color: white;
+}
+.cart-item-title > div {
+  padding: 10px;
+  width: 10%;
+}
+.cart-item-title > div:nth-child(2) {
+  width: 50%;
+}
+.info::after,
+.info::before {
+  color: yellow;
 }

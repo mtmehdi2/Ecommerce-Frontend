@@ -13,7 +13,7 @@ body {
   display: flex;
 }
 .cart-table .cart-item:nth-child(odd) {
-  background-color: #e6f1ec;
+  background-color: #d9e1f1;
 }
 
 .prod-title {
@@ -52,7 +52,7 @@ input[type="number"] {
 }
 
 .cart-item-title {
-  background-color: darkgreen;
+  background-color: #4673c2;
   display: flex;
   font-weight: bold;
   color: white;

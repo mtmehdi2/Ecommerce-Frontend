@@ -46,11 +46,15 @@
             <div class="prod-img">
               <img src="images/pic1.jpg" width="50" height="50" />
             </div>
-            <div class="prod-title">Product 1</div>
+            <div class="prod-title">
+              <span class="label">Product Title:</span>Product 1
+            </div>
             <div class="p-unit-price">
+              <span class="label">Unit Price:</span>
               <input type="number" value="9.99" readonly id="unit_price1" />
             </div>
             <div class="p-quantity">
+              <span class="label">Quantity:</span>
               <input
                 type="number"
                 value="1"
@@ -60,6 +64,7 @@
               />
             </div>
             <div class="p-total-price">
+              <span class="label">Total Price:</span>
               <input
                 type="number"
                 value="9.99"
@@ -83,11 +88,15 @@
             <div class="prod-img">
               <img src="images/pic2.jpg" width="50" height="50" />
             </div>
-            <div class="prod-title">Product 2</div>
+            <div class="prod-title">
+              <span class="label">Product Title:</span> Product 2
+            </div>
             <div class="p-unit-price">
+              <span class="label">Unit Price:</span>
               <input type="number" value="12.99" readonly id="unit_price2" />
             </div>
             <div class="p-quantity">
+              <span class="label">Quantity:</span>
               <input
                 type="number"
                 value="1"
@@ -97,6 +106,7 @@
               />
             </div>
             <div class="p-total-price">
+              <span class="label">Total Price:</span>
               <input
                 type="number"
                 value="12.99"
@@ -120,11 +130,15 @@
             <div class="prod-img">
               <img src="images/pic3.jpg" width="50" height="50" />
             </div>
-            <div class="prod-title">Product 3</div>
+            <div class="prod-title">
+              <span class="label">Product Title:</span>Product 3
+            </div>
             <div class="p-unit-price">
+              <span class="label">Unit Price:</span>
               <input type="number" value="25.99" readonly id="unit_price3" />
             </div>
             <div class="p-quantity">
+              <span class="label">Quantity:</span>
               <input
                 type="number"
                 value="1"
@@ -134,6 +148,7 @@
               />
             </div>
             <div class="p-total-price">
+              <span class="label">Total Price:</span>
               <input
                 type="number"
                 value="25.99"
@@ -157,11 +172,15 @@
             <div class="prod-img">
               <img src="images/pic4.jpg" width="50" height="50" />
             </div>
-            <div class="prod-title">Product 4</div>
+            <div class="prod-title">
+              <span class="label">Product Title:</span> Product 4
+            </div>
             <div class="p-unit-price">
+              <span class="label">Unit Price:</span>
               <input type="number" value="15.99" readonly id="unit_price4" />
             </div>
             <div class="p-quantity">
+              <span class="label">Quantity:</span>
               <input
                 type="number"
                 value="1"
@@ -171,6 +190,7 @@
               />
             </div>
             <div class="p-total-price">
+              <span class="label">Total Price:</span>
               <input
                 type="number"
                 value="15.99"
@@ -194,11 +214,15 @@
             <div class="prod-img">
               <img src="images/pic5.jpg" width="50" height="50" />
             </div>
-            <div class="prod-title">Product 5</div>
+            <div class="prod-title">
+              <span class="label">Product Title:</span>Product 5
+            </div>
             <div class="p-unit-price">
+              <span class="label">Unit Price:</span>
               <input type="number" value="19.99" readonly id="unit_price5" />
             </div>
             <div class="p-quantity">
+              <span class="label">Quantity:</span>
               <input
                 type="number"
                 value="1"
@@ -208,6 +232,7 @@
               />
             </div>
             <div class="p-total-price">
+              <span class="label">Total Price:</span>
               <input
                 type="number"
                 value="20.99"
@@ -252,7 +277,7 @@
         let qty = document.getElementById("quantity" + ind).value;
         let unit_price = document.getElementById("unit_price" + ind).value;
         let total_price = document.getElementById("total_price" + ind);
-        total_price.value = qty * unit_price;
+        total_price.value = (qty * unit_price).toFixed(2);
         calcTotal();
       }
       function calcTotal() {

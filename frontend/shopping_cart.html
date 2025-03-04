@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopping Cart</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width:900px)"
+      href="css/shopping_cart.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:900px)"
+      href="css/shoppring_cart_mobile.css"
+    />
+  </head>
+  <body>
+    <h1>Shopping Cart</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, iste labore aspernatur deserunt quos voluptate quis excepturi accusantium, mollitia assumenda iure, consectetur illum at! Vel dolorum nam eum officiis ducimus.</p>
+    <section id="cart_content">
+      <form method="post" class="cart-table">
+        <div class="cart-item">
+          <div class="prod-img"><img src="images/pic1.jpg" width="100" height="100"><div>
+            <div class="prod-title">Product 1</div>
+            <div class="p-unit-price"><input type="number" value="9.99" readonly id="unit_price1"></div>
+            <div class="p-quantity"><input type="number" value="1" id="quantity1" min="0"></div>
+            <div class="p-total-price"><input type="number" value="9.99" readonly id="total_price1"></div>
+            <div class="p-action"><button id="btn_remove1" type="button">Remove</button></div>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

@@ -36,6 +36,7 @@
       <section id="products_list"></section>
     </div>
     <hr />
+    <button onclick="showStorage()">Show Shopping Cart</button>
     <footer>
       <div class="copyright">Copyright &copy; 2025. ZYZ Corporation</div>
     </footer>
@@ -114,8 +115,69 @@
 
     <script>
       function addToCart(ind) {
-        alert("Product" + ind + " has been added to the cart");
+        let storedVal = localStorage.getItem("myShoppingCart");
+        let myCart = [];
+        if (storedVal != null) {
+          myCart = JSON.parse(storedVal);
+        }
+
+        let myProd = {};
+
+        myProd.productID = ind;
+        myProd.quantity = 1;
+        let theProd = products.find((obj) => obj.id == ind);
+
+        myProd.price = _("#prod" + ind + "_size").value;
+        const findSizeByPrice = (targetPrice) => {
+          for (const [size, details] of Object.entries(theProd)) {
+            if (details.price === targetPrice) {
+              return size;
+            }
+          }
+          return null; // Return null if no size matches the target price
+        };
+        myProd.size = findSizeByPrice(myProd.price);
+        myCart.push(myProd);
+
+        let myStr = JSON.stringify(myCart);
+        localStorage.setItem("myShoppingCart", myStr);
+
+        showAlert(theProd.name, theProd.image);
+      }
+
+      function showAlert(pname, pimg) {
+        _("#alert_prod_img").src = "images/" + pimg;
+        _("#alert_prod_img").alt = pname;
+        _("#alert_prod_name").innerHTML = pname;
+        _(".alert-msg")[0].style.display = "block";
+      }
+      function showStorage() {
+        let mCrt = localStorage.getItem("myShoppingCart");
+        for (i = 0; i < mCrt.length; i++) {
+          console.log(mCrt[i]);
+        }
       }
     </script>
+    <div class="alert-msg">
+      <div class="alert-body">
+        <h1>Successful!</h1>
+        <div class="alert-name-img">
+          <div><img id="alert_prod_img" src="images/pic1.jpg" alt="" /></div>
+          <div>
+            <span id="alert_prod_name">Product 1</span> was successfully added
+            to the shopping cart.
+          </div>
+        </div>
+        <div class="alert-buttons">
+          <button
+            type="button"
+            onclick="_('.alert-msg')[0].style.display='none';"
+          >
+            Continue Shopping
+          </button>
+          <a href="shopping_cart.html">Checkout</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

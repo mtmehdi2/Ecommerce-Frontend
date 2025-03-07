@@ -122,3 +122,7 @@ footer {
     width: 50%;
   }
 }
+
+select {
+  padding: 10px;
+}

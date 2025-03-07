@@ -1,1 +1,1 @@
-function _(c){return c.substr(0,1)=="#"?document.getElementById(c.substr(1,c.length-1)):c.substring(0,1)=="."?document.getElementsByClassName(cin.substr(1,c.length-1)):c.substring(0,1)=="$"?document.getElementsByName(c.substr(1,c.length-1)):document.getElementsByTagName(c);}
+function _(c){return c.substr(0,1)=="#"?document.getElementById(c.substr(1,c.length-1)):c.substring(0,1)=="."?document.getElementsByClassName(c.substr(1,c.length-1)):c.substring(0,1)=="$"?document.getElementsByName(c.substr(1,c.length-1)):document.getElementsByTagName(c);}

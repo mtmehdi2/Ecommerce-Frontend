@@ -1,0 +1,426 @@
+        <!--
+        <div class="products">
+          <h2>Product 1</h2>
+          <div>
+            <a href="product.html"
+              ><img
+                class="prod-img"
+                src="images/pic1.jpg"
+                alt="product 1"
+                width="200"
+                height="120"
+            /></a>
+          </div>
+          <div class="desc-title">Description</div>
+          <p>
+            Lorum ipsum dolor sit, amet consectetur adipisicing elit. Sit dolor
+            ea exercitationem possimus consectetur modi, nobis qui delectus
+            fugit quisquam, tempore sed accusamus inventore molestiae aspernatur
+            quasi recusandae natus eligendi.
+          </p>
+          <div class="price">$24<sup>99</sup></div>
+          <div>
+            <form method="post">
+              <input type="hidden" name="prod_id" id="prod_id1" value="1" />
+              <input type="hidden" name="post" value="post" />
+              <button id="add-to-cart-btn-prod1" class="add-to-cart-button">
+                Add to Cart
+              </button>
+            </form>
+          </div>
+          <div class="prod-features">
+            <div class="available-sizes">Available Sizes</div>
+            <div class="prod-feature hdr">
+              <div>Size:</div>
+              <div>Availability</div>
+            </div>
+            <div class="prod-feature">
+              <div>Small:</div>
+              <div><span>Available(</span>1 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Medium</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Large</div>
+              <div>Out of Stock</div>
+            </div>
+            <div class="prod-feature">
+              <div>Extra Large</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="products">
+          <h2>Product 2</h2>
+          <div>
+            <a href="product.html"
+              ><img
+                class="prod-img"
+                src="images/pic2.jpg"
+                alt="product 2"
+                width="200"
+                height="120"
+            /></a>
+          </div>
+          <div class="desc-title">Description</div>
+          <p>
+            Lorum ipsum dolor sit, amet consectetur adipisicing elit. Sit dolor
+            ea exercitationem possimus consectetur modi, nobis qui delectus
+            fugit quisquam, tempore sed accusamus inventore molestiae aspernatur
+            quasi recusandae natus eligendi.
+          </p>
+          <div class="price">$24<sup>99</sup></div>
+          <div>
+            <form method="post">
+              <input type="hidden" name="prod_id" id="prod_id1" value="1" />
+              <input type="hidden" name="post" value="post" />
+              <button id="add-to-cart-btn-prod1" class="add-to-cart-button">
+                Add to Cart
+              </button>
+            </form>
+          </div>
+          <div class="prod-features">
+            <div class="available-sizes">Available Sizes</div>
+            <div class="prod-feature hdr">
+              <div>Size:</div>
+              <div>Availability</div>
+            </div>
+            <div class="prod-feature">
+              <div>Small:</div>
+              <div><span>Available(</span>1 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Medium</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Large</div>
+              <div>Out of Stock</div>
+            </div>
+            <div class="prod-feature">
+              <div>Extra Large</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="products">
+          <h2>Product 3</h2>
+          <div>
+            <a href="product.html"
+              ><img
+                class="prod-img"
+                src="images/pic3.jpg"
+                alt="product 3"
+                width="200"
+                height="120"
+            /></a>
+          </div>
+          <div class="desc-title">Description</div>
+          <p>
+            Lorum ipsum dolor sit, amet consectetur adipisicing elit. Sit dolor
+            ea exercitationem possimus consectetur modi, nobis qui delectus
+            fugit quisquam, tempore sed accusamus inventore molestiae aspernatur
+            quasi recusandae natus eligendi.
+          </p>
+          <div class="price">$24<sup>99</sup></div>
+          <div>
+            <form method="post">
+              <input type="hidden" name="prod_id" id="prod_id1" value="1" />
+              <input type="hidden" name="post" value="post" />
+              <button id="add-to-cart-btn-prod1" class="add-to-cart-button">
+                Add to Cart
+              </button>
+            </form>
+          </div>
+          <div class="prod-features">
+            <div class="available-sizes">Available Sizes</div>
+            <div class="prod-feature hdr">
+              <div>Size:</div>
+              <div>Availability</div>
+            </div>
+            <div class="prod-feature">
+              <div>Small:</div>
+              <div><span>Available(</span>1 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Medium</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Large</div>
+              <div>Out of Stock</div>
+            </div>
+            <div class="prod-feature">
+              <div>Extra Large</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="products">
+          <h2>Product 4</h2>
+          <div>
+            <a href="product.html"
+              ><img
+                class="prod-img"
+                src="images/pic4.jpg"
+                alt="product 4"
+                width="200"
+                height="120"
+            /></a>
+          </div>
+          <div class="desc-title">Description</div>
+          <p>
+            Lorum ipsum dolor sit, amet consectetur adipisicing elit. Sit dolor
+            ea exercitationem possimus consectetur modi, nobis qui delectus
+            fugit quisquam, tempore sed accusamus inventore molestiae aspernatur
+            quasi recusandae natus eligendi.
+          </p>
+          <div class="price">$24<sup>99</sup></div>
+          <div>
+            <form method="post">
+              <input type="hidden" name="prod_id" id="prod_id1" value="1" />
+              <input type="hidden" name="post" value="post" />
+              <button id="add-to-cart-btn-prod1" class="add-to-cart-button">
+                Add to Cart
+              </button>
+            </form>
+          </div>
+          <div class="prod-features">
+            <div class="available-sizes">Available Sizes</div>
+            <div class="prod-feature hdr">
+              <div>Size:</div>
+              <div>Availability</div>
+            </div>
+            <div class="prod-feature">
+              <div>Small:</div>
+              <div><span>Available(</span>1 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Medium</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Large</div>
+              <div>Out of Stock</div>
+            </div>
+            <div class="prod-feature">
+              <div>Extra Large</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="products">
+          <h2>Product 5</h2>
+          <div>
+            <a href="product.html"
+              ><img
+                class="prod-img"
+                src="images/pic5.jpg"
+                alt="product 5"
+                width="200"
+                height="120"
+            /></a>
+          </div>
+          <div class="desc-title">Description</div>
+          <p>
+            Lorum ipsum dolor sit, amet consectetur adipisicing elit. Sit dolor
+            ea exercitationem possimus consectetur modi, nobis qui delectus
+            fugit quisquam, tempore sed accusamus inventore molestiae aspernatur
+            quasi recusandae natus eligendi.
+          </p>
+          <div class="price">$24<sup>99</sup></div>
+          <div>
+            <form method="post">
+              <input type="hidden" name="prod_id" id="prod_id1" value="1" />
+              <input type="hidden" name="post" value="post" />
+              <button id="add-to-cart-btn-prod1" class="add-to-cart-button">
+                Add to Cart
+              </button>
+            </form>
+          </div>
+          <div class="prod-features">
+            <div class="available-sizes">Available Sizes</div>
+            <div class="prod-feature hdr">
+              <div>Size:</div>
+              <div>Availability</div>
+            </div>
+            <div class="prod-feature">
+              <div>Small:</div>
+              <div><span>Available(</span>1 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Medium</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Large</div>
+              <div>Out of Stock</div>
+            </div>
+            <div class="prod-feature">
+              <div>Extra Large</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="products">
+          <h2>Product 6</h2>
+          <div>
+            <a href="product.html"
+              ><img
+                class="prod-img"
+                src="images/pic6.jpg"
+                alt="product 6"
+                width="200"
+                height="120"
+            /></a>
+          </div>
+          <div class="desc-title">Description</div>
+          <p>
+            Lorum ipsum dolor sit, amet consectetur adipisicing elit. Sit dolor
+            ea exercitationem possimus consectetur modi, nobis qui delectus
+            fugit quisquam, tempore sed accusamus inventore molestiae aspernatur
+            quasi recusandae natus eligendi.
+          </p>
+          <div class="price">$24<sup>99</sup></div>
+          <div>
+            <form method="post">
+              <input type="hidden" name="prod_id" id="prod_id1" value="1" />
+              <input type="hidden" name="post" value="post" />
+              <button id="add-to-cart-btn-prod1" class="add-to-cart-button">
+                Add to Cart
+              </button>
+            </form>
+          </div>
+          <div class="prod-features">
+            <div class="available-sizes">Available Sizes</div>
+            <div class="prod-feature hdr">
+              <div>Size:</div>
+              <div>Availability</div>
+            </div>
+            <div class="prod-feature">
+              <div>Small:</div>
+              <div><span>Available(</span>1 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Medium</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Large</div>
+              <div>Out of Stock</div>
+            </div>
+            <div class="prod-feature">
+              <div>Extra Large</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="products">
+          <h2>Product 7</h2>
+          <div>
+            <a href="product.html"
+              ><img
+                class="prod-img"
+                src="images/pic7.jpg"
+                alt="product 7"
+                width="200"
+                height="120"
+            /></a>
+          </div>
+          <div class="desc-title">Description</div>
+          <p>
+            Lorum ipsum dolor sit, amet consectetur adipisicing elit. Sit dolor
+            ea exercitationem possimus consectetur modi, nobis qui delectus
+            fugit quisquam, tempore sed accusamus inventore molestiae aspernatur
+            quasi recusandae natus eligendi.
+          </p>
+          <div class="price">$24<sup>99</sup></div>
+          <div>
+            <form method="post">
+              <input type="hidden" name="prod_id" id="prod_id1" value="1" />
+              <input type="hidden" name="post" value="post" />
+              <button id="add-to-cart-btn-prod1" class="add-to-cart-button">
+                Add to Cart
+              </button>
+            </form>
+          </div>
+          <div class="prod-features">
+            <div class="available-sizes">Available Sizes</div>
+            <div class="prod-feature hdr">
+              <div>Size:</div>
+              <div>Availability</div>
+            </div>
+            <div class="prod-feature">
+              <div>Small:</div>
+              <div><span>Available(</span>1 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Medium</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Large</div>
+              <div>Out of Stock</div>
+            </div>
+            <div class="prod-feature">
+              <div>Extra Large</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="products">
+          <h2>Product 8</h2>
+          <div>
+            <a href="product.html"
+              ><img
+                class="prod-img"
+                src="images/pic8.jpg"
+                alt="product 8"
+                width="200"
+                height="120"
+            /></a>
+          </div>
+          <div class="desc-title">Description</div>
+          <p>
+            Lorum ipsum dolor sit, amet consectetur adipisicing elit. Sit dolor
+            ea exercitationem possimus consectetur modi, nobis qui delectus
+            fugit quisquam, tempore sed accusamus inventore molestiae aspernatur
+            quasi recusandae natus eligendi.
+          </p>
+          <div class="price">$24<sup>99</sup></div>
+          <div>
+            <form method="post">
+              <input type="hidden" name="prod_id" id="prod_id1" value="1" />
+              <input type="hidden" name="post" value="post" />
+              <button id="add-to-cart-btn-prod1" class="add-to-cart-button">
+                Add to Cart
+              </button>
+            </form>
+          </div>
+          <div class="prod-features">
+            <div class="available-sizes">Available Sizes</div>
+            <div class="prod-feature hdr">
+              <div>Size:</div>
+              <div>Availability</div>
+            </div>
+            <div class="prod-feature">
+              <div>Small:</div>
+              <div><span>Available(</span>1 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Medium</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+            <div class="prod-feature">
+              <div>Large</div>
+              <div>Out of Stock</div>
+            </div>
+            <div class="prod-feature">
+              <div>Extra Large</div>
+              <div><span>Available (</span>3 in Stock<span>)</span></div>
+            </div>
+          </div>
+        </div>
+      -->

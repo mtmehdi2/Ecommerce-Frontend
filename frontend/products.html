@@ -40,6 +40,7 @@
       <div class="copyright">Copyright &copy; 2025. ZYZ Corporation</div>
     </footer>
     <script src="js/e.js"></script>
+    <script src="js/functions.js"></script>
     <script src="js/products.js"></script>
     <script>
       let dispBlock = "";
@@ -55,7 +56,51 @@
           "' width='200' height='120'></a></div>";
         prod += "<div class='desc-title'>Description</div>";
         prod += "<p>" + item.description + "</p>";
-        prod += "";
+        prod += "<div class='price'id='prod" + item.id + "_price'>$";
+        let prc = item.sizes.s.price.toString();
+        let prc2 = prc.split(".");
+        prod += prc2[0] + "<sup>" + prc2[1] + "</sup></div>";
+        prod += "<div><form method='post'>";
+        prod +=
+          "<button class='add-to-cart-button' type='button' onclick='addToCart(" +
+          item.id +
+          ")'>Add to Cart</button>";
+        prod += "</form></div>";
+        prod +=
+          "<div class='prod-features'><div class='available-sizes'>Available Sizes</div>";
+        prod +=
+          "<select name='prod_size' id='prod" +
+          item.id +
+          "_size' onchange='updatePrice(" +
+          item.id +
+          ",this.value)'>";
+        prod += "<option value='" + item.sizes.s.price + "'";
+        prod += item.sizes.s.available ? "" : " disabled";
+        prod += ">Small | ";
+        prod += item.sizes.s.available ? "Available" : "(Out of Stock)";
+        prod += item.sizes.s.available ? " (" + item.sizes.s.price + ")" : "";
+        prod += "</option>";
+        prod += "<option value='" + item.sizes.m.price + "'";
+        prod += item.sizes.m.available ? "" : " disabled";
+        prod += ">Medium | ";
+        prod += item.sizes.m.available ? "Available" : "(Out of Stock)";
+        prod += item.sizes.m.available ? " (" + item.sizes.m.price + ")" : "";
+        prod += "</option>";
+        prod += "<option value='" + item.sizes.l.price + "'";
+        prod += item.sizes.l.available ? "" : " disabled";
+        prod += ">Large | ";
+        prod += item.sizes.l.available ? "Available" : "(Out of Stock)";
+        prod += item.sizes.l.available ? " (" + item.sizes.l.price + ")" : "";
+        prod += "</option>";
+        prod += "<option value='" + item.sizes.xl.price + "'";
+        prod += item.sizes.xl.available ? "" : " disabled";
+        prod += ">Extra Large | ";
+        prod += item.sizes.xl.available ? "Available" : "(Out of Stock)";
+        prod += item.sizes.xl.available ? " (" + item.sizes.xl.price + ")" : "";
+        prod += "</option>";
+
+        prod += "</select></div>";
+
         prod += "</div>";
         return prod;
       });
@@ -65,65 +110,12 @@
       });
 
       _("#products_list").innerHTML = dispBlock;
+    </script>
 
-      /*
-        <div class="template">
-          <div class="products">
-            <h2>Product 1</h2>
-            <div>
-              <a href="product.html"
-                ><img
-                  class="prod-img"
-                  src="images/pic1.jpg"
-                  alt="product 1"
-                  width="200"
-                  height="120"
-              /></a>
-            </div>
-            <div class="desc-title">Description</div>
-            <p>
-              Lorum ipsum dolor sit, amet consectetur adipisicing elit. Sit dolor ea
-              exercitationem possimus consectetur modi, nobis qui delectus fugit
-              quisquam, tempore sed accusamus inventore molestiae aspernatur quasi
-              recusandae natus eligendi.
-            </p>
-            <div class="price">$24<sup>99</sup></div>
-            <div>
-              <form method="post">
-                <input type="hidden" name="prod_id" id="prod_id1" value="1" />
-                <input type="hidden" name="post" value="post" />
-                <button id="add-to-cart-btn-prod1" class="add-to-cart-button">
-                  Add to Cart
-                </button>
-              </form>
-            </div>
-            <div class="prod-features">
-              <div class="available-sizes">Available Sizes</div>
-              <div class="prod-feature hdr">
-                <div>Size:</div>
-                <div>Availability</div>
-              </div>
-              <div class="prod-feature">
-                <div>Small:</div>
-                <div><span>Available(</span>1 in Stock<span>)</span></div>
-              </div>
-              <div class="prod-feature">
-                <div>Medium</div>
-                <div><span>Available (</span>3 in Stock<span>)</span></div>
-              </div>
-              <div class="prod-feature">
-                <div>Large</div>
-                <div>Out of Stock</div>
-              </div>
-              <div class="prod-feature">
-                <div>Extra Large</div>
-                <div><span>Available (</span>3 in Stock<span>)</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      */
+    <script>
+      function addToCart(ind) {
+        alert("Product" + ind + " has been added to the cart");
+      }
     </script>
   </body>
 </html>

@@ -16,62 +16,115 @@
     <link rel="shortcut icon" href="images/favicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
+  <script src="js/e.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/functions.js"></script>
   <body>
-    <section id="product_details">
-      <h1>Shirt</h1>
-      <div class="container">
-        <div class="img">
-          <img
-            src="images/pic1.jpg"
-            alt="Product One"
-            height="300"
-            width="500"
-          />
-        </div>
-        <div class="description">
-          <h2>Description</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-            enim! Tenetur provident sequi neque quasi nostrum? Sed, atque?Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, enim!
-            Tenetur provident sequi neque quasi nostrum? Sed, atque?Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Obcaecati, enim!
-            Tenetur provident sequi neque quasi nostrum? Sed, atque?
-          </p>
-        </div>
-        <form class="frm-add-to-cart" method="post">
-          <button id="add-to-cart-button" class="add-to-cart-button">
-            Add to Cart
-          </button>
-        </form>
-        <section class="sizes">
-          <h3>Available Sizes</h3>
-          <div class="size-rw hdr">
-            <div>Size</div>
-            <div>Availability</div>
-          </div>
-          <div class="size-rw">
-            <div>Small</div>
-            <div>In Stock</div>
-          </div>
-          <div class="size-rw">
-            <div>Medium</div>
-            <div>In Stock</div>
-          </div>
-          <div class="size-rw">
-            <div>Large</div>
-            <div>Out of Stock</div>
-          </div>
-          <div class="size-rw">
-            <div>Extra Large</div>
-            <div>In Stock</div>
-          </div>
-        </section>
-      </div>
-    </section>
+    <section id="product_details"></section>
+    <script>
+      const currProductId = Number(localStorage.getItem("myCurrProd"));
+      const currentProduct = products.find((item) => item.id === currProductId);
+      let displayBlock = "<h1>" + currentProduct.name + "</h1>";
+      displayBlock += "<div class='container'>";
+      displayBlock +=
+        "<div class='img'><img src='images/" +
+        currentProduct.image +
+        "' alt='" +
+        currentProduct.name +
+        "' height='400' width='400'></div>";
+      displayBlock += "<div class='description'>";
+      displayBlock += "<h2>Description</h2>";
+      displayBlock += "<p>" + currentProduct.description + "</p>";
+      displayBlock +=
+        "<div class='price'id='prod" + currentProduct.id + "_price'>$";
+      let prc = currentProduct.sizes.s.price.toString();
+      let prc2 = prc.split(".");
+      displayBlock += prc2[0] + "<sup>" + prc2[1] + "</sup></div>";
+
+      displayBlock += "<form class='frm-add-to-cart' method='post'>";
+      displayBlock +=
+        "<button class='add-to-cart-button' type='button' onclick='addToCart(" +
+        currentProduct.id +
+        ")'>Add to Cart</button> ";
+      displayBlock +=
+        "<a href='shopping_cart.html' class='add-to-cart-button'>Checkout</a>";
+      displayBlock += "</form>";
+      displayBlock += "<div class='sizes'><h3>Available Sizes</h3>";
+      displayBlock +=
+        "<select name='prod_size' id='prod" +
+        currentProduct.id +
+        "_size' onchange='updatePrice(" +
+        currentProduct.id +
+        ",this.value)'>";
+      displayBlock += "<option value='" + currentProduct.sizes.s.price + "'";
+      displayBlock += currentProduct.sizes.s.available ? "" : " disabled";
+      displayBlock += ">Small | ";
+      displayBlock += currentProduct.sizes.s.available
+        ? "Available"
+        : "(Out of Stock)";
+      displayBlock += currentProduct.sizes.s.available
+        ? " (" + currentProduct.sizes.s.price + ")"
+        : "";
+      displayBlock += "</option>";
+      displayBlock += "<option value='" + currentProduct.sizes.m.price + "'";
+      displayBlock += currentProduct.sizes.m.available ? "" : " disabled";
+      displayBlock += ">Medium | ";
+      displayBlock += currentProduct.sizes.m.available
+        ? "Available"
+        : "(Out of Stock)";
+      displayBlock += currentProduct.sizes.m.available
+        ? " (" + currentProduct.sizes.m.price + ")"
+        : "";
+      displayBlock += "</option>";
+      displayBlock += "<option value='" + currentProduct.sizes.l.price + "'";
+      displayBlock += currentProduct.sizes.l.available ? "" : " disabled";
+      displayBlock += ">Large | ";
+      displayBlock += currentProduct.sizes.l.available
+        ? "Available"
+        : "(Out of Stock)";
+      displayBlock += currentProduct.sizes.l.available
+        ? " (" + currentProduct.sizes.l.price + ")"
+        : "";
+      displayBlock += "</option>";
+      displayBlock += "<option value='" + currentProduct.sizes.xl.price + "'";
+      displayBlock += currentProduct.sizes.xl.available ? "" : " disabled";
+      displayBlock += ">Extra Large | ";
+      displayBlock += currentProduct.sizes.xl.available
+        ? "Available"
+        : "(Out of Stock)";
+      displayBlock += currentProduct.sizes.xl.available
+        ? " (" + currentProduct.sizes.xl.price + ")"
+        : "";
+      displayBlock += "</option>";
+
+      displayBlock += "</select>";
+      displayBlock += "</select>";
+      displayBlock += "</div></div>";
+      _("#product_details").innerHTML = displayBlock;
+    </script>
 
     <footer>
       <div class="copyright">&copy; 2025. ZYZ Corporation</div>
     </footer>
+    <div class="alert-msg">
+      <div class="alert-body">
+        <h1>Successful!</h1>
+        <div class="alert-name-img">
+          <div><img id="alert_prod_img" src="images/pic1.jpg" alt="" /></div>
+          <div>
+            <span id="alert_prod_name">Product 1</span> was successfully added
+            to the shopping cart.
+          </div>
+        </div>
+        <div class="alert-buttons">
+          <a
+            href="#"
+            onclick="_('.alert-msg')[0].style.display='none';return false;"
+            >Continue Shopping</a
+          >
+          <a href="shopping_cart.html">Checkout</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

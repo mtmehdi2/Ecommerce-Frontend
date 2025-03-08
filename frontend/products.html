@@ -15,6 +15,10 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="images/favicon.jpg" />
+    <script src="js/e.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/functions.js"></script>
   </head>
 
   <body>
@@ -36,128 +40,9 @@
       <section id="products_list"></section>
     </div>
     <hr />
-    <button onclick="showStorage()">Show Shopping Cart</button>
     <footer>
       <div class="copyright">Copyright &copy; 2025. ZYZ Corporation</div>
     </footer>
-    <script src="js/e.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/products.js"></script>
-    <script>
-      let dispBlock = "";
-      let myProducts = products.map((item) => {
-        let prod = "<div class='products'>";
-        prod += "<h2>" + item.name + "</h2>";
-        prod +=
-          "<div><a href='product.html'><img class='prod-img' src='images/";
-        prod +=
-          item.image +
-          "' alt='" +
-          item.name +
-          "' width='200' height='120'></a></div>";
-        prod += "<div class='desc-title'>Description</div>";
-        prod += "<p>" + item.description + "</p>";
-        prod += "<div class='price'id='prod" + item.id + "_price'>$";
-        let prc = item.sizes.s.price.toString();
-        let prc2 = prc.split(".");
-        prod += prc2[0] + "<sup>" + prc2[1] + "</sup></div>";
-        prod += "<div><form method='post'>";
-        prod +=
-          "<button class='add-to-cart-button' type='button' onclick='addToCart(" +
-          item.id +
-          ")'>Add to Cart</button>";
-        prod += "</form></div>";
-        prod +=
-          "<div class='prod-features'><div class='available-sizes'>Available Sizes</div>";
-        prod +=
-          "<select name='prod_size' id='prod" +
-          item.id +
-          "_size' onchange='updatePrice(" +
-          item.id +
-          ",this.value)'>";
-        prod += "<option value='" + item.sizes.s.price + "'";
-        prod += item.sizes.s.available ? "" : " disabled";
-        prod += ">Small | ";
-        prod += item.sizes.s.available ? "Available" : "(Out of Stock)";
-        prod += item.sizes.s.available ? " (" + item.sizes.s.price + ")" : "";
-        prod += "</option>";
-        prod += "<option value='" + item.sizes.m.price + "'";
-        prod += item.sizes.m.available ? "" : " disabled";
-        prod += ">Medium | ";
-        prod += item.sizes.m.available ? "Available" : "(Out of Stock)";
-        prod += item.sizes.m.available ? " (" + item.sizes.m.price + ")" : "";
-        prod += "</option>";
-        prod += "<option value='" + item.sizes.l.price + "'";
-        prod += item.sizes.l.available ? "" : " disabled";
-        prod += ">Large | ";
-        prod += item.sizes.l.available ? "Available" : "(Out of Stock)";
-        prod += item.sizes.l.available ? " (" + item.sizes.l.price + ")" : "";
-        prod += "</option>";
-        prod += "<option value='" + item.sizes.xl.price + "'";
-        prod += item.sizes.xl.available ? "" : " disabled";
-        prod += ">Extra Large | ";
-        prod += item.sizes.xl.available ? "Available" : "(Out of Stock)";
-        prod += item.sizes.xl.available ? " (" + item.sizes.xl.price + ")" : "";
-        prod += "</option>";
-
-        prod += "</select></div>";
-
-        prod += "</div>";
-        return prod;
-      });
-
-      myProducts.forEach((element) => {
-        dispBlock += element;
-      });
-
-      _("#products_list").innerHTML = dispBlock;
-    </script>
-
-    <script>
-      function addToCart(ind) {
-        let storedVal = localStorage.getItem("myShoppingCart");
-        let myCart = [];
-        if (storedVal != null) {
-          myCart = JSON.parse(storedVal);
-        }
-
-        let myProd = {};
-
-        myProd.productID = ind;
-        myProd.quantity = 1;
-        let theProd = products.find((obj) => obj.id == ind);
-
-        myProd.price = _("#prod" + ind + "_size").value;
-        const findSizeByPrice = (targetPrice) => {
-          for (const [size, details] of Object.entries(theProd)) {
-            if (details.price === targetPrice) {
-              return size;
-            }
-          }
-          return null; // Return null if no size matches the target price
-        };
-        myProd.size = findSizeByPrice(myProd.price);
-        myCart.push(myProd);
-
-        let myStr = JSON.stringify(myCart);
-        localStorage.setItem("myShoppingCart", myStr);
-
-        showAlert(theProd.name, theProd.image);
-      }
-
-      function showAlert(pname, pimg) {
-        _("#alert_prod_img").src = "images/" + pimg;
-        _("#alert_prod_img").alt = pname;
-        _("#alert_prod_name").innerHTML = pname;
-        _(".alert-msg")[0].style.display = "block";
-      }
-      function showStorage() {
-        let mCrt = localStorage.getItem("myShoppingCart");
-        for (i = 0; i < mCrt.length; i++) {
-          console.log(mCrt[i]);
-        }
-      }
-    </script>
     <div class="alert-msg">
       <div class="alert-body">
         <h1>Successful!</h1>
@@ -169,15 +54,17 @@
           </div>
         </div>
         <div class="alert-buttons">
-          <button
-            type="button"
-            onclick="_('.alert-msg')[0].style.display='none';"
+          <a
+            href="#"
+            onclick="_('.alert-msg')[0].style.display='none';return false;"
+            >Continue Shopping</a
           >
-            Continue Shopping
-          </button>
           <a href="shopping_cart.html">Checkout</a>
         </div>
       </div>
     </div>
+    <script>
+      displayProducts();
+    </script>
   </body>
 </html>

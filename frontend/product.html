@@ -21,88 +21,6 @@
   <script src="js/functions.js"></script>
   <body>
     <section id="product_details"></section>
-    <script>
-      const currProductId = Number(localStorage.getItem("myCurrProd"));
-      const currentProduct = products.find((item) => item.id === currProductId);
-      let displayBlock = "<h1>" + currentProduct.name + "</h1>";
-      displayBlock += "<div class='container'>";
-      displayBlock +=
-        "<div class='img'><img src='images/" +
-        currentProduct.image +
-        "' alt='" +
-        currentProduct.name +
-        "' height='400' width='400'></div>";
-      displayBlock += "<div class='description'>";
-      displayBlock += "<h2>Description</h2>";
-      displayBlock += "<p>" + currentProduct.description + "</p>";
-      displayBlock +=
-        "<div class='price'id='prod" + currentProduct.id + "_price'>$";
-      let prc = currentProduct.sizes.s.price.toString();
-      let prc2 = prc.split(".");
-      displayBlock += prc2[0] + "<sup>" + prc2[1] + "</sup></div>";
-
-      displayBlock += "<form class='frm-add-to-cart' method='post'>";
-      displayBlock +=
-        "<button class='add-to-cart-button' type='button' onclick='addToCart(" +
-        currentProduct.id +
-        ")'>Add to Cart</button> ";
-      displayBlock +=
-        "<a href='shopping_cart.html' class='add-to-cart-button'>Checkout</a>";
-      displayBlock += "</form>";
-      displayBlock += "<div class='sizes'><h3>Available Sizes</h3>";
-      displayBlock +=
-        "<select name='prod_size' id='prod" +
-        currentProduct.id +
-        "_size' onchange='updatePrice(" +
-        currentProduct.id +
-        ",this.value)'>";
-      displayBlock += "<option value='" + currentProduct.sizes.s.price + "'";
-      displayBlock += currentProduct.sizes.s.available ? "" : " disabled";
-      displayBlock += ">Small | ";
-      displayBlock += currentProduct.sizes.s.available
-        ? "Available"
-        : "(Out of Stock)";
-      displayBlock += currentProduct.sizes.s.available
-        ? " (" + currentProduct.sizes.s.price + ")"
-        : "";
-      displayBlock += "</option>";
-      displayBlock += "<option value='" + currentProduct.sizes.m.price + "'";
-      displayBlock += currentProduct.sizes.m.available ? "" : " disabled";
-      displayBlock += ">Medium | ";
-      displayBlock += currentProduct.sizes.m.available
-        ? "Available"
-        : "(Out of Stock)";
-      displayBlock += currentProduct.sizes.m.available
-        ? " (" + currentProduct.sizes.m.price + ")"
-        : "";
-      displayBlock += "</option>";
-      displayBlock += "<option value='" + currentProduct.sizes.l.price + "'";
-      displayBlock += currentProduct.sizes.l.available ? "" : " disabled";
-      displayBlock += ">Large | ";
-      displayBlock += currentProduct.sizes.l.available
-        ? "Available"
-        : "(Out of Stock)";
-      displayBlock += currentProduct.sizes.l.available
-        ? " (" + currentProduct.sizes.l.price + ")"
-        : "";
-      displayBlock += "</option>";
-      displayBlock += "<option value='" + currentProduct.sizes.xl.price + "'";
-      displayBlock += currentProduct.sizes.xl.available ? "" : " disabled";
-      displayBlock += ">Extra Large | ";
-      displayBlock += currentProduct.sizes.xl.available
-        ? "Available"
-        : "(Out of Stock)";
-      displayBlock += currentProduct.sizes.xl.available
-        ? " (" + currentProduct.sizes.xl.price + ")"
-        : "";
-      displayBlock += "</option>";
-
-      displayBlock += "</select>";
-      displayBlock += "</select>";
-      displayBlock += "</div></div>";
-      _("#product_details").innerHTML = displayBlock;
-    </script>
-
     <footer>
       <div class="copyright">&copy; 2025. ZYZ Corporation</div>
     </footer>
@@ -126,5 +44,8 @@
         </div>
       </div>
     </div>
+    <script>
+      showCurrentProductDetails();
+    </script>
   </body>
 </html>

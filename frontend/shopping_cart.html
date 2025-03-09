@@ -32,7 +32,7 @@
       let grandTotal = 0;
       if (myCartItems != null) {
         cartItems = JSON.parse(myCartItems);
-        grandTotal = calculateTotal(cartItems);
+        grandTotal = calculateTotal(cartItems).toFixed(2);
       }
     </script>
   </head>

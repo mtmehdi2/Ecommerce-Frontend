@@ -19,22 +19,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="shortcut icon" href="images/favicon.jpg" />
-    <script src="js/e.js"></script>
-    <script src="js/products.js"></script>
-    <script src="js/shopping_cart.js"></script>
-    <script>
-      const calculateTotal = (items) =>
-        items
-          .map((obj) => Number(obj.price))
-          .reduce((total, ni) => total + ni, 0);
-      let myCartItems = localStorage.getItem("myShoppingCart");
-      let cartItems = null;
-      let grandTotal = 0;
-      if (myCartItems != null) {
-        cartItems = JSON.parse(myCartItems);
-        grandTotal = calculateTotal(cartItems).toFixed(2);
-      }
-    </script>
   </head>
   <body>
     <h1>Shopping Cart</h1>
@@ -50,6 +34,22 @@
     <footer>
       <div class="copyright">Copyright &copy; 2025. ZYZ Corporation</div>
     </footer>
+    <script>
+      const calculateTotal = (items) =>
+        items
+          .map((obj) => Number(obj.price))
+          .reduce((total, ni) => total + ni, 0);
+      let myCartItems = localStorage.getItem("myShoppingCart");
+      let cartItems = null;
+      let grandTotal = 0;
+      if (myCartItems != null) {
+        cartItems = JSON.parse(myCartItems);
+        grandTotal = calculateTotal(cartItems).toFixed(2);
+      }
+    </script>
+    <script src="js/e.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/shopping_cart.js"></script>
     <script>
       displayCart();
     </script>

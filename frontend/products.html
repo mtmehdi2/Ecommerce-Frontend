@@ -15,10 +15,6 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="images/favicon.jpg" />
-    <script src="js/e.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/products.js"></script>
-    <script src="js/functions.js"></script>
   </head>
 
   <body>
@@ -57,15 +53,15 @@
           </div>
         </div>
         <div class="alert-buttons">
-          <a
-            href="#"
-            onclick="_('.alert-msg')[0].style.display='none';return false;"
-            >Continue Shopping</a
-          >
+          <a href="#" onclick="closeAlert();">Continue Shopping</a>
           <a href="shopping_cart.html">Checkout</a>
         </div>
       </div>
     </div>
+    <script src="js/e.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/functions.js"></script>
     <script>
       displayProducts();
     </script>

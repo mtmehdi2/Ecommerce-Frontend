@@ -16,9 +16,6 @@
     <link rel="shortcut icon" href="images/favicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <script src="js/e.js"></script>
-  <script src="js/products.js"></script>
-  <script src="js/functions.js"></script>
   <body>
     <section id="product_details"></section>
     <footer>
@@ -38,15 +35,14 @@
           </div>
         </div>
         <div class="alert-buttons">
-          <a
-            href="#"
-            onclick="_('.alert-msg')[0].style.display='none';return false;"
-            >Continue Shopping</a
-          >
+          <a href="#" onclick="closeAlert()">Continue Shopping</a>
           <a href="shopping_cart.html">Checkout</a>
         </div>
       </div>
     </div>
+    <script src="js/e.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/functions.js"></script>
     <script>
       showCurrentProductDetails();
     </script>

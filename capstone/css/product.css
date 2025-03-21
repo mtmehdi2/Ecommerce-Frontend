@@ -1,0 +1,65 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+header,
+footer {
+  text-align: center;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.copyright {
+  padding: 10px;
+}
+
+.p-container {
+  padding: 10px 50px 50px;
+  text-align: center;
+}
+.p-img {
+  width: 400px;
+  height: auto;
+}
+
+select {
+  padding: 10px;
+}
+
+.p-price {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.p-price sup {
+  font-size: 1rem;
+}
+
+.submit-links {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.submit-links button {
+  font-size: 1rem;
+  background-color: transparent;
+}
+.submit-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.submit-links a,
+.submit-links button {
+  border: 1px solid #333333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: inline-block;
+  margin: auto 5px;
+  cursor: pointer;
+}

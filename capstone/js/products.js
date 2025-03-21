@@ -7,7 +7,6 @@ Promise.all([
       const category = categories.find(
         (cat) => cat.category_id === item.category
       );
-      price_str = item.starting_at_price.toString().split(".");
       _("#products-container").innerHTML += `
         <a class='prod-lnk' href='product.html?product_id=${item.product_id}'>
         <div class='prod-container'>

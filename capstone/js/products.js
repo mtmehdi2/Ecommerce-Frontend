@@ -14,7 +14,7 @@ Promise.all([
             <div class='prod-img-ctnr'><img class='prod-img' src='${item.picture_url}' alt='' width='500' height='500'></div>
             <h2 class='prod-titlle'>${item.name}</h2>
             <div class='prod-category'>${category.name}</div>
-            <div class='prod-quantity'>Quantity: ${item.stock_quantity}</div>
+            <div class='prod-quantity'>Stock: ${item.stock_quantity}</div>
             <div class='prod-price'>$${item.starting_at_price}</div>
         </div></a>`;
     });

@@ -6,32 +6,37 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link
       rel="stylesheet"
-      href="css/styles.css"
-      media="screen and (min-width:900px)"
-    />
-    <link
-      rel="stylesheet"
-      href="css/mobile.css"
-      media="screen and (max-width: 900px)"
-    />
-    <link rel="shortcut-icon" href="images/favicon.jpg" />
+      href="css/categories.css"/>
+    <link rel="shortcut icon" href="images/favico.png" />
   </head>
   <body>
-    <h>Categories</h>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, impedit
-      accusantium deleniti nisi explicabo, provident natus, necessitatibus
-      incidunt molestiae architecto nostrum. Quae sint molestiae mollitia
-      blanditiis labore odit fugit ea.
-    </p>
-    <section id="cat-container"></section>
+    <header>
+      <div><img src="images/logo.png" alt="logo"></div>
+      <div class="lnks"><a href="products.html">Products</a> | <a href="#">Categories</a></div>
+    </header>
+    <h1>Categories</h1>
+ 
+    <section id="cat-container">
+      <div class="cat-hdr">Main Categories</div>
+      <div class="main-cat-ctnr">
+        <div class="main-cat-rw hdr">
+          <div class="main-cat-fc">ID</div>
+          <div class="main-cat-lc">Cat Name</div>
+        </div>
+      </div>
+      <div class="cat-hdr">Sub Categories</div>
+      <div class="child-cat-ctnr">
+        <div class="child-cat-rw hdr">
+          <div class="child-cat-fc">ID</div>
+          <div class="child-cat-sc">Cat Name</div>
+          <div class="child-cat-lc">Parent Cat</div>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="copyright">2025&copy; All Rights Reserved.</div>
     </footer>
     <script src="js/e.js"></script>
-    <script>
-      const apiUrl = 'http://3.136.18.203:8000/categories/';
-      fetch(apiUrl).then(response =>response.json()).then(data=>{console.log(data)}).catch(err=>{console.error(err.message)})
-    </script>
+    <script src="js/categories.js"></script>
   </body>
 </html>

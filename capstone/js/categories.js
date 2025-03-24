@@ -53,3 +53,12 @@ fetch(apiUrl)
   .catch((err) => {
     console.error(err.message);
   });
+
+  (()=>{
+    const shoppingCart = localStorage.getItem("capstoneShoppingCart");
+    if(shoppingCart!=null && shoppingCart !=undefined){
+      const theCart = JSON.parse(shoppingCart);
+      console.log(theCart.length);
+      document.querySelector('.cart-icon').setAttribute('data-number',theCart.length);
+    }
+  })();

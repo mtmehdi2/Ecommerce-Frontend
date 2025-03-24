@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="css/product.css" media="screen and (min-width:900px)" />
     <link rel="stylesheet" href="css/product-mob.css" media="screen and (max-width: 900px)" />
-    <link rel="shortcut-icon" href="images/favicon.jpg" />
+    <link rel="shortcut icon" href="images/favico.png" />
   </head>
   <body>
     <header>
@@ -28,13 +28,13 @@
         <div class='p-img-ctnr'><img class='p-img' src='' alt='' width='400' height='400'></div>
         <h2 class='p-title'></h2>
         <p class='p-description'></p>
-        <p class='p-category'></p>
-        <p class='p-quantity'></p>
+        <p class='p-category'>Category: </p>
+        <p class='p-quantity'>Stock Quantity: </p>
         <p class='p-price'>$</p>
         <h3 class='variety-title'>Varieties</h3>
-        <div><select onchange='updatePrice(this.value)'></select></div>
-        <div class='submit-links'>Quantity: <input type='text' value='1'>
-          <button>Add to Cart</button><a href='products.html'>Back to Products page</a></div>
+        <div><select onchange='updatePrice()' id="varieties"></select></div>
+        <div class='submit-links'>Quantity: <input type='number' value='1' min="1" id="quantity" onchange="updatePrice()"><input type="hidden" id="variety"><input type="hidden" id="price"><input type="hidden" id="total_price"><input type="hidden" id="product_id">
+          <button onclick="addToCart()">Add to Cart</button><a href='products.html'>Back to Products page</a></div>
       </div>
     </template>
     <script src="js/e.js"></script>

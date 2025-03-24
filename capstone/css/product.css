@@ -33,17 +33,20 @@ header img {
   display: flex;
   justify-content: flex-start;
 }
+
 .breadcrumb > div {
-  padding: 5px 25px 5px 5px;
+  padding: 5px;
   position: relative;
+  margin-right: 20px;
 }
+
 .breadcrumb > div::after {
   content: "";
   position: absolute;
-  right: 0;
-  top: 8px;
-  border: 7px solid;
-  border-color: transparent transparent transparent white;
+  right: -20px;
+  top: 6px;
+  border: 8px solid;
+  border-color: transparent transparent transparent white; 
 }
 
 a {
@@ -75,7 +78,10 @@ h1 {
 select {
   padding: 10px;
 }
-
+#quantity {
+  padding: 5px 10px;
+  width: 100px;
+}
 .p-price {
   font-weight: bold;
   font-size: 1.5rem;

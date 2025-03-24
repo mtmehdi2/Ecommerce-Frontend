@@ -1,0 +1,39 @@
+Capstone Project Notes
+
+- Change innerHTML to template
+- Error Handling ...
+- Breadcrumbs ...
+
+
+
+
+const fragment = document.createDocumentFragment();
+
+products.forEach(product => {
+  const elem = document.createElement('elem');
+  elem.textContent = product.var1;
+
+  const elem2 = document.createElement('elem2');
+  elem2.textContent = product.var2;
+
+  const elem10 = document.createElement('elem10');
+  elem10.textContent = product.var10;
+
+  fragment.appendChild(elem);
+  fragment.appendChild(elem2);
+  fragment.appendChild(elem10);
+});
+
+container.appendChild(fragment); // Append everything at once
+
+
+fetch('https://api.example.com/endpoint', {
+  method: 'POST', // Specify the HTTP method
+  headers: {
+    'Content-Type': 'application/json' // Set the content type to JSON
+  },
+  body: JSON.stringify({ key1: 'value1', key2: 'value2' }) // Convert data to JSON string
+})
+  .then(response => response.json()) // Parse the response JSON
+  .then(data => console.log('Success:', data))
+  .catch(error => console.error('Error:', error));

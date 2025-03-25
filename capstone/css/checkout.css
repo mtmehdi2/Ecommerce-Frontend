@@ -112,3 +112,9 @@ h1 {
   content: attr(data-number);
   padding: 0 10px;
 }
+
+@media screen and (max-width:900px) {
+  input[type=text],input[type=number],textarea {
+    width: 95%;
+  }
+}

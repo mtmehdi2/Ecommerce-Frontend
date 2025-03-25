@@ -129,3 +129,22 @@ a:active {
     border-radius: 5px;
     padding: 8px 12px;
   }
+
+  @media screen and (max-width: 900px) {
+    .c-rw {
+      flex-direction: column;
+    }
+    .c-rw>div {
+      width: 100%;
+    }
+    .c-rw>div::before {
+      content: attr(data-title);
+      font-weight: bold;
+      width: 20%;
+      display: inline-block;
+      margin-right: 20px;
+    }
+    .hdr {
+      display: none;
+    }
+  }

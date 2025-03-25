@@ -12,6 +12,9 @@ footer {
   color: #ffffff;
   padding: 10px;
 }
+footer {
+  text-align: center;
+}
 header {
   display: flex;
   justify-content: flex-start;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping Cart</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="shortcut icon" href="images/favico.png">
+  </head>
+  <body>
+    <header>
+      <div><img src="images/logo.png" alt="logo"></div>
+      <div class="lnks"><a href="products.html">Products</a> | <a href="categories.html">Categories</a></div><a class="cart-icon" href="cart.html" data-number="0"></a>
+    </header>
+    <h1>Shopping Cart</h1>
+    <section id="product-container">
+        <div class="c-rw hdr">
+            <div class="c-product">Product</div>
+            <div class="c-variety">Variety</div>
+            <div class="c-quantity">Quantity</div>
+            <div class="c-price">Price</div>
+            <div class="c-total">Total</div>
+            <div class="c-action">Action</div>
+        </div>
+    </section>
+    <section id="checkout">
+    <div class="grand-total-ctnr"><div>Grand Total: </div> <div class='grand-total'>25.99</div></div>
+    <div class="checkout-ctnr"><a href="checkout.html">Proceed to Checkout</a></div>
+    </section>
+    <footer>
+      <div class="copyright">2025&copy; All Rights Reserved.</div>
+    </footer>
+    <template id="cart-template">
+        <div class="c-rw">
+            <div class="c-product" data-title="Product:">Product 1</div>
+            <div class="c-variety" data-title="Variety:">1 Pound</div>
+            <div class="c-quantity" data-title="Quantity:">3</div>
+            <div class="c-price" data-title="Price: "="">25.99</div>
+            <div class="c-total" data-title="Total: ">77.97</div>
+            <div class="c-action"><button class="btn-remove">Remove</div>
+        </div>
+    </template>
+    <script src="js/e.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

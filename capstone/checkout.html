@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checkout</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="shortcut-icon" href="images/favicon.jpg">
+  </head>
+  <body>
+    <header>
+    <div><img src="images/logo.png" alt="Logo"></div>
+    <div class="lnks"><a href="products.html">Products</a> | <a href="categories.html">Categories</a></div> <a class="cart-icon" href="cart.html" data-number="0"></a>
+    </header>
+    <h1>Checkout</h1>
+    <section id="product-container">
+        <form>
+            <div>
+                <div>Customer ID: <input type="text" id="customer_id" name="customer_id" value="" readonly></div>
+                <div>Order Total: <input type="text" id="total_amount" name="total_amount" value="10.99"></div>
+                <div>Payment Methods</div>
+                <div class="payment-methods">
+                    <div><input type="radio" class="rdo" name="payment_method" value="CREDIT_CARD" checked>Credit Card</div>
+                    <div><input type="radio" class="rdo" name="payment_method" value="DEBIT_CARD">Debit Card</div>
+                    <div><input type="radio" name="payment_method" value="PAYPAL">PayPal</div>
+                    <div><input type="radio" name="payment_method" value="CASH_ON_DELIVERY">Cash on Delivery</div>
+                </div>
+                <div>Delivery Address: <textarea rows="5" id="shipping_address" name="shipping_address"></textarea></div>
+                <div><button type="button" onclick="placeOrder()" id="submit-button">Submit</button></div>
+            </div>
+        </form>         
+    </section>
+    <div id="result"></div>
+    <footer>
+      <div class="copyright">2025&copy; All Rights Reserved.</div>
+    </footer>
+    <template id="result-template">
+        <h2 class="a-title">Order Successful!</h2>
+        <div><span>Order ID: </span> <span class="a-order-id"></span></div>
+        <div><span>Customer ID: </span><span class="a-customer-id"></span></div>
+        <div><span>Order Date: </span><span class="a-order-date"></span></div>
+        <div><span>Total Amount: </span><span class="a-total-amount"></span></div>
+        <div><span>Order Status: </span><span class="a-order-status"></span></div>
+        <div><span>Payment Method: </span><span class="a-payment-method"></span></div>
+        <div><span>Shipping Address: </span><span class="a-shipping-address"></span></div>
+        <div><textarea class="a-code" rows="8"></textarea></div>
+    </template>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

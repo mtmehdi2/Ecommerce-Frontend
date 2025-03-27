@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="shortcut icon" href="images/favico.png">
+  </head>
+  <body>
+    <header>
+      <div><img src="images/logo.png" alt="logo"></div>
+      <div class="lnks"><a href="#">Products</a> | <a href="categories.html">Categories</a></div>
+      <a class="cart-icon" href="cart.html" data-number="0"></a>
+    </header>
+    <h1>All Products</h1>
+    <section id="product-container"></section>
+    <footer>
+      <div class="copyright">2025&copy; All Rights Reserved.</div>
+    </footer>
+    <template id="prod-template">
+      <a class='prod-lnk' href='product.html?product_id='>
+        <div class='prod-container'>
+            <h2 class='prod-title'></h2>
+            <div class='prod-img-ctnr'><img class='prod-img' src='' alt='' width='500' height='500'></div>
+            <div class='prod-desc'></div>
+            <div class='prod-category'></div>
+            <div class='prod-price'><span>$</span><sup></sup></div>
+            <div class='prod-quantity'>Stock Qty: </div>
+        </div></a>
+    </template>
+    <script src="js/e.js"></script>
+    <script src="js/error.js"></script>
+    <script src="js/products.js"></script>
+  </body>
+</html>

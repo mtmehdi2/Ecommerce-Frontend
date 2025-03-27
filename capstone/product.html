@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Details</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="shortcut icon" href="images/favico.png">
+  </head>
+  <body>
+    <header>
+    <div><img src="images/logo.png" alt="Logo"></div>
+    <div class="breadcrumb">
+      <div>Food</div>
+      <div>Dog Food</div>
+      <div>Product Name</div>
+      <div> | <a href="products.html">Products</a> | <a href="categories.html">Categories</a></div>
+    </div>
+    <a class="cart-icon" href="cart.html" data-number="0"></a>
+    </header>
+    <div class="info">Product was addde successfully to the cart.</div>
+    <h1 id="prod-title">Product Details</h1>
+    <section id="product-container"></section>
+    <footer>
+      <div class="copyright">2025&copy; All Rights Reserved.</div>
+    </footer>
+    <template id="prod-template">
+      <div class='p-container'>
+        <div class='p-img-ctnr'><img class='p-img' src='' alt='' width='400' height='400'></div>
+        <h2 class='p-title'></h2>
+        <p class='p-description'></p>
+        <p class='p-category'>Category: </p>
+        <p class='p-quantity'>Stock Quantity: </p>
+        <p class='p-price'>$</p>
+        <h3 class='variety-title'>Varieties</h3>
+        <div><select onchange='updatePrice()' id="varieties"></select></div>
+        <div class='submit-links'>Quantity: <input type='number' value='1' min="1" id="quantity" onchange="updatePrice()"><input type="hidden" id="variety"><input type="hidden" id="price"><input type="hidden" id="total_price"><input type="hidden" id="product_id">
+          <button onclick="addToCart()">Add to Cart</button><a href='cart.html'>View Shopping Cart</a></div>
+      </div>
+    </template>
+    <script src="js/e.js"></script>
+    <script src="js/error.js"></script>
+    <script src="js/product.js"></script>
+  </body>
+</html>

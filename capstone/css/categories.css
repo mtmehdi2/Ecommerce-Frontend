@@ -1,0 +1,108 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+header,
+footer {
+  background-color: #1d5997;
+  color: #ffffff;
+  padding: 10px;
+}
+footer {
+  text-align: center;
+}
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header > div:first-child {
+  width: 20%;
+  text-align: center;
+}
+header > div:last-child {
+  width: 80%;
+}
+header img {
+  width: 50px;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1 {
+  text-align: center;
+}
+.copyright {
+  padding: 10px;
+}
+
+.cat-hdr {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+.main-cat-ctnr,
+.child-cat-ctnr {
+  width: 400px;
+  margin: auto;
+}
+.child-cat-ctnr {
+  margin-bottom: 50px;
+}
+.main-cat-rw,
+.child-cat-rw {
+  display: flex;
+  justify-content: flex-start;
+}
+.main-cat-rw.hdr,
+.child-cat-rw.hdr {
+  font-weight: bold;
+  background-color: #1d5997;
+  color: white;
+}
+.main-cat-rw:nth-child(even),
+.child-cat-rw:nth-child(even) {
+  background-color: #d3d3d3;
+}
+.main-cat-fc,
+.child-cat-fc {
+  width: 20%;
+}
+.child-cat-sc,
+.child-cat-lc {
+  width: 40%;
+}
+.main-cat-fc,
+.main-cat-lc,
+.child-cat-fc,
+.child-cat-sc,
+.child-cat-lc {
+  padding: 8px 12px;
+}
+
+
+.cart-icon {
+  position: absolute;
+  right: 100px;
+  padding: 10px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url('../images/cart-icon2.png');
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+}
+.cart-icon img {
+  width: 30px;
+}
+.cart-icon::after {
+  content: attr(data-number);
+  padding: 0 10px;
+}
